@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Karma:wght@300;400;500;600;700&display=swap');
+*, ::after, ::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'karma', sans-serif;
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
+}
+body{
+    background-color: #333;
+}
+.screen{
+    width: 1440px;
+    background-color: #333;
+    margin: 0 auto;
+    padding: 4rem;
+}
+.minhaImagem{
+    width: 302px;
+    height: 302px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('../img/fotosite.jpg') lightgray 50% / cover no-repeat;
+    background-position-y: -65px;
+}
+.top{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+.menu{
+    width: 50%;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    gap: 30px;
+}
+.top h1{
+    color: white;
+}
+.menu a{
+    color: #d0d0d0;
+    text-decoration: none;
+    transition: 0.25s ease;
+    &:hover{
+        color: #fff;
+        text-decoration: underline;
+        transform: scale(1.2);
+    }
+}
+.icons{
+    display: flex;
+    gap: 10px;
+}
+.icons i{
+    color: #d0d0d0;
+    font-size: 24px;
+    transition: 0.3s ease;
+    &:hover{
+        color: #fff;
+        transform: scale(1.25);
+    }
+}
