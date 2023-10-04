@@ -8,16 +8,16 @@
     ">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#fff">
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Portfolio João Victor</title>
 </head>
 <body>
     <div class="screen">
-        <header class="top">
-            <a href="#top"><h2>JOÃO VICTOR ARAUJO</h2></a>
-            <div class="menu">
-                <a href="#">HOME</a>
+        <header class="top" id="top">
+            <a href="#top">JOÃO VICTOR ARAÚJO</a>
+            <div class="menu" >
+                <a href="#top">HOME</a>
                 <a href="#habilidades">HABILIDADES</a>
                 <a href="#projetos">PROJETOS</a>
                 <a href="#contato">CONTATO</a>
@@ -51,14 +51,13 @@
                             estou pronto para dar o meu próximo passo na carreira de desenvolvedor e conquistar meu primeiro emprego.
                         </p>
                     </div>
-                    <!-- <img src="img/controleDeVideoGame.png" alt="" width="25%"> -->
                 </div>
                 <svg xmlns="http://www.w3.org/2000/svg" width="1090" height="344" viewBox="0 0 1090 344" fill="none" class="fundoSobreMim bgCont2">
                     <path d="M1090 344L0 344L154.5 0L1090 0V344Z" fill="#0E1A23"/>
                 </svg>
             </div>
             <div class="contHabilidades">
-                <h1 class="habilidades">HABILIDADES</h1>
+                <h1 class="habilidades" id="habilidades">HABILIDADES</h1>
                 <div class="logoHabilidades">
                     <!-- HTML -->
                     <svg xmlns="http://www.w3.org/2000/svg" width="111" height="128" viewBox="0 0 111 128" fill="none">
@@ -108,14 +107,18 @@
                     </svg>
                 </div>
             </div>
-            <div class="contProjetos">
+            <div class="contProjetos" id="projetos">
                 <h1>PROJETOS</h1>
                 <P>Estou desenvolvendo alguns projetos, os adicionarei em breve.</P>
+            </div>
+            <div class="botaoSubir" id="btSubir">
+                <i class="bi bi-arrow-up-short"></i>
             </div>
         </section>
         <footer>
 
         </footer>
     </div>
+    <script defer src="javaScript/scroll.js"></script>
 </body>
 </html>
