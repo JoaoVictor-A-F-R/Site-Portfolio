@@ -25,7 +25,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url('../img/fotosite.jpg') lightgray 50% / cover no-repeat;
+    background: url('../img/fotosite.avif') lightgray 50% / cover no-repeat;
     background-position-y: -65px;
     transform: rotateY(180deg);
     box-shadow: 0 0 25px 1.5px #0f0f0f;
@@ -113,7 +113,6 @@ body{
     font-size: 16px;
 }
 .btCurriculo{
-    width: 40%;
     padding: 0.4rem 0.3rem 0 0.3rem;;
     color: #0E1A23 !important;
     text-align: center;
@@ -137,7 +136,7 @@ body{
 }
 .contHabilidades{
     width: 100%;
-    margin: 10rem auto;
+    margin: 10rem auto 5rem auto;
 }
 .contHabilidades h1{
     color: #fff;
@@ -167,4 +166,14 @@ body{
         opacity: 1;
         transform: scale(1.15);
     }
+}
+.contProjetos h1{
+    color: #fff;
+    font-size: 48px;
+    text-align: center;
+}
+.contProjetos p{
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
 }
