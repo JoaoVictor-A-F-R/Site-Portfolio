@@ -1,4 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Karma:wght@300;400;500;600;700&display=swap');
+@keyframes menuRetratil {
+    0%{
+        right: -15rem;
+    }
+    100%{
+        right: 0;
+    }
+}
+@keyframes menuRetratil2 {
+    0%{
+        right: 0;
+    }
+    10%{
+        right: 5;
+    }
+    100%{
+        right: 0;
+    }
+}
 *, ::after, ::before{
     margin: 0;
     padding: 0;
@@ -20,20 +39,19 @@ body{
 }
 .minhaImagem{
     width: 302px;
-    height: 302px;
-    border-radius: 50%;
+    height: 500px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     background: url('../img/fotosite.avif') lightgray 50% / cover no-repeat;
-    background-position-y: -65px;
     transform: rotateY(180deg);
-    box-shadow: 0 0 25px 1.5px #0f0f0f;
 }
 .top{
     display: flex;
     justify-content: space-between;
-    align-items: end;
+    align-items: center;
 }
 .menu{
     width: 50%;
@@ -61,6 +79,31 @@ body{
         transform: scale(1.2);
     }
 }
+.contMenu{
+    display: none;
+    animation: 0.7s ease end;
+}
+.menuRetratil{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: #0E1A23;
+    width: 250px;
+    border-bottom-left-radius: 15px;
+    padding: 0.4rem;
+}
+.menuRetratil a{
+    font-size: 16px !important;
+}
+.iconMenu{
+    max-height: 38px;
+    background-color: #0E1A23;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    font-size: 35px;
+    color: #fff;
+}
 .icons{
     display: flex;
     align-items: end;
@@ -81,29 +124,23 @@ body{
 .cont1{
     display: flex;
 }
-.bgCont1{
-    position: absolute;
-    right: 0;
-}
-.bgCont2{
-    position: absolute;
-    left: 0;
-    margin-top: 2.5rem;
-}
 .intCont1{
     display: flex;
     justify-content: space-between;
     align-items: center;
     
     width: 100%;
-    margin-top: 1.5rem;
+    background-color: #0E1A23;
+    padding-left: 16px;
+    border-radius: 10px;
     z-index: 100;
 }
 .txtCont1{
-    width: 36.5%;
+    width: 60%;
     display: flex;
     flex-direction: column;
     gap: 0.7rem;
+    margin: 0 auto;
 }
 .txtCont1 h1{
     color: #fff;
@@ -111,29 +148,24 @@ body{
 }
 .txtCont1 p{
     color: #d0d0d0;
+    margin-bottom: 1rem;
     font-size: 16px;
 }
 .btCurriculo{
-    padding: 0.4rem 0.3rem 0 0.3rem;;
-    color: #0E1A23 !important;
+    padding: 0.4rem 0.5rem 0 0.5rem;
+    color: #d0d0d0 !important;
     text-align: center;
     font-size: 18px;
     font-weight: 600;
     border-radius: 10px;
-    background-color: #d0d0d0;
+    border: 2px solid #d0d0d0;
     margin: 0;
 
     &:hover{
         transform: scale(1.1) !important;
-        color: #fff !important;
-        background-color: #0E1A23;
+        background-color: #fff !important;
+        color: #0E1A23 !important;
     }
-}
-.intCont2{
-    margin-top: 8rem;
-}
-.fundoSobreMim{
-    transform: rotate(180deg);
 }
 .contHabilidades{
     width: 100%;
@@ -153,11 +185,9 @@ body{
     gap: 80px 170px;
 
     width: 855px;
-    height: 527px;
+    min-height: 527px;
     padding: 64px;
     margin: 2rem auto;
-    border-radius: 10px;
-    background-color: #0E1A23;
 }
 .logoHabilidades svg{
     opacity: 0.80;
@@ -201,4 +231,69 @@ body{
 .botaoSubir i{
     color: white;
     font-size: 36px;
+}
+body::-webkit-scrollbar {
+    width: 8px;               
+}
+body::-webkit-scrollbar-track {
+    background: transparent;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: #555;
+    border-radius: 5px;
+}
+@media (max-width: 1440px) {
+    .screen{
+        padding: 3rem;
+    }
+}
+@media (max-width: 1024px) {
+    .screen{
+        padding: 2rem;
+    }
+    .txtCont1 p{
+        margin-bottom: 10px;
+    }
+    .menu{
+        width: 45%;
+        gap: 25px;
+    }
+    .top a{
+        font-size: 32px;
+    }
+    .menu a{
+        font-size: 16px;
+    }
+    .logoHabilidades{
+    gap: 1rem;
+    justify-items: center;
+    }
+    .minhaImagem{
+        width: 275px;
+        height: 450px;
+    }
+}
+@media (max-width: 900px) {
+    .menu{
+        display: none;
+    }
+    .screen{
+        padding: 1.5rem;
+    }
+    .top{
+        align-items: flex-start;
+    }
+    .logoHabilidades{
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+    }
+    .minhaImagem{
+        width: 200px;
+        height: 400px;
+    }
+    .contMenu{
+        display: flex;
+        position: absolute;
+        right: 0;
+    }
 }
